@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Medium-Grey-30: hsla(216, 12%, 54%, 30%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 2.4rem;
+  background-color: var(--Very-Dark-Blue);
+}
+
+main {
+  max-width: 41.2rem;
+  border-radius: 3rem;
+  padding: 3.2rem;
+  background-color: var(--Dark-Blue);
+  position: relative;
+}
+
+#rating {
+  transition: all 0.3s ease-in-out;
+}
+
+.star {
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: var(--Medium-Grey-30);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  margin-bottom: 3.2rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: var(--Light-Grey);
+  margin-bottom: 3rem;
+}
+
+form fieldset {
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+}
+
+form fieldset input {
+  display: none;
+}
+
+form fieldset label {
+  background-color: var(--Medium-Grey-30);
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: var(--Medium-Grey);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form fieldset label:hover {
+  background-color: var(--Orange);
+  color: white;
+}
+
+.active {
+  color: white;
+  background-color: var(--Medium-Grey);
+}
+
+form button {
+  border: 0;
+  display: block;
+  width: 100%;
+  height: 4.5rem;
+  border-radius: 3.5rem;
+  background-color: var(--Orange);
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+  background-color: white;
+  color: var(--Orange);
+}
+
+#thanks {
+  padding: 1.6rem 0;
+  position: absolute;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+
+#thanks img {
+  display: block;
+  margin: 0 auto;
+}
+
+#thanks div {
+  max-width: max-content;
+  margin: 3.2rem auto;
+  background-color: var(--Medium-Grey-30);
+  padding: 0.8rem 2rem;
+  border-radius: 3rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.005em;
+  color: var(--Orange);
+}
+
+#thanks h1 {
+  text-align: center;
+}
+
+#thanks p {
+  text-align: center;
+  line-height: 2.4rem;
+  letter-spacing: 0.003em;
+  margin: 0;
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    padding: 2.4rem;
+    border-radius: 1.5rem;
+  }
+
+  .star {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-bottom: 2.8rem;
+  }
+
+  form fieldset {
+    margin-bottom: 2.8rem;
+  }
+
+  form fieldset label {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  #thanks div {
+    margin: 2.4rem auto 2.8rem auto;
+  }
+
+  #thanks h1 {
+    margin-bottom: 1.2rem;
+  }
+}
